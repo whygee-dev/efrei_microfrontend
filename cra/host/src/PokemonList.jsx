@@ -15,7 +15,7 @@ export default function PokemonList() {
     fetchPokemons()
       .then(setPokemons)
       .finally(() => setLoading(false));
-  });
+  }, []);
 
   if (loading) {
     return <p>Loading Pokemons...</p>;
